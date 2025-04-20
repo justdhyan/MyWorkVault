@@ -1,0 +1,122 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 97%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 47 100% 68%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 184 83% 56%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 347 100% 59%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+
+    --radius: 0rem;
+  }
+
+  .dark {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 47 100% 68%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 184 83% 56%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 347 100% 59%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-neu-white text-neu-black font-mono;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-extrabold;
+  }
+}
+
+@layer components {
+  .neu-button {
+    @apply bg-neu-yellow text-neu-black font-bold px-6 py-3 border-4 border-neu-black
+    hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all duration-200
+    hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)] shadow-[4px_4px_0_0_rgba(0,0,0,1)]
+    hover:bg-neu-pink active:translate-y-[2px] active:translate-x-[2px]
+    active:shadow-[2px_2px_0_0_rgba(0,0,0,1)];
+  }
+
+  .neu-card {
+    @apply bg-white border-4 border-neu-black p-5 shadow-[8px_8px_0_0_rgba(0,0,0,1)]
+    hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[10px_10px_0_0_rgba(0,0,0,1)]
+    transition-all duration-200;
+  }
+  
+  .neu-input {
+    @apply bg-white border-4 border-neu-black p-3 w-full placeholder:text-gray-500
+    focus:outline-none focus:border-neu-pink focus:shadow-[4px_4px_0_0_rgba(0,0,0,1)]
+    transition-all duration-200;
+  }
+  
+  .nav-link {
+    @apply relative font-bold px-3 py-2 text-lg hover:text-neu-pink transition-colors;
+  }
+  
+  .neu-project-card {
+    @apply bg-white border-4 border-neu-black overflow-hidden transition-all duration-200
+    hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0_0_rgba(0,0,0,1)]
+    hover:border-neu-pink;
+  }
+
+  .section-title {
+    @apply text-5xl font-extrabold mb-6 inline-block border-b-8 border-neu-yellow pb-2
+    hover:border-neu-pink transition-colors duration-300;
+  }
+}
+
